@@ -97,7 +97,7 @@ shinyServer(function(input, output) { ## Funciton defenition
     if (input$querytype == "Hits per Day") {
       bool <- F
     }
-    graph.output <- my.fun(vector.keyword = input$searchterm, state.abbr = state.code, bool)
+    graph.output <- my.fun(vector.keyword = input$searchterm, state.abbr = paste0("US-", state.code), bool)
     print(graph.output)
   }) #Close renderPlot
 }) # Close function/shinyServer call
