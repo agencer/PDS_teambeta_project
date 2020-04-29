@@ -1,6 +1,5 @@
 library(shiny) # call to shiny
 
-statecodes <- read.csv("https://raw.githubusercontent.com/williamloh1/teambeta/master/Project/datasets/state%20codes.csv")
 
 ########  Package:  'gtrendsR'
 ####
@@ -92,6 +91,7 @@ shinyServer(function(input, output) { ## Funciton defenition
   ## In this case, we are going to add a component to 
   ## the output.
   output$searchGraph <- renderPlot({
+    statecodes <- read.csv("https://raw.githubusercontent.com/williamloh1/teambeta/master/Project/datasets/state%20codes.csv")
     state.code <- statecodes$state_code[statecodes$state == input$stateterm]
     bool <- T
     if (input$querytype == "Hits per Day") {
