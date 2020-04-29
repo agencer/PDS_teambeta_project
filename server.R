@@ -37,6 +37,7 @@ my.fun <- function(vector.keyword = "covid19",  state.abbr = "US", change = FALS
   lockdown <- read.csv("https://raw.githubusercontent.com/williamloh1/teambeta/master/Project/datasets/lockdown_dates.csv")
   USlockdown <- lockdown[which(lockdown$Country=="United States"), ]
   USlockdown$Place <- state.abb[match(USlockdown$Place, state.name)]
+  USlockdown$Place <- paste0("US-", USlockdown$Place)
   
   if(change == FALSE){if(is.element(state.abbr, USlockdown$Place)==T){
     statelock <- USlockdown[USlockdown$Place==state.abbr, ]
