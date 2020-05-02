@@ -159,7 +159,9 @@ shinyApp(
   
   - **‘gtrendsR’**: In obtaining the Google Trends Data, our App makes use of an api called *‘gtrendsR’*. The *‘gtrendsR’* allows us to retrive the *Google Trends* data, the normalized trend of terms, by specifying certain 1) search terms, 2) units of geographies, and 3) time ranges. Because we want the users to search for any term that they are interested, we did not specify a certain search term. Instead, the *‘gtrendsR’* retrives whatever the user desires to see. As we are interested with the search trends in the US, we also use the *‘gtrendsR’* to call only the states in the United States. This specification any possible mistakes in the locality searches (e.g. Canada (CA) vs California (US-CA)). Lastly, because we are only interested in the search term trends given the covid-19, we specify the time range between March 01 2020 and April 15 2020. This allows us to see the results that are normalized based on Covid-19 crisis. For further information, please see the related [documentation](https://cran.r-project.org/web/packages/gtrendsR/gtrendsR.pdf).
   
-  - **The Lockdown Dates Dataset**:
+  - **The Lockdown Dates Dataset**: [documentation](https://auravision.ai/covid19-lockdown-tracker/)
+  
+  
 
 #### - **The Shiny App**:
   - **What it does**: The app allows the user to input different search terms and outputs different visualizations to show how the popularity of that term has changed during quarantine. 
