@@ -9,7 +9,19 @@ output: html_document
 
 ### The Covid-19 outbreak has changed every aspect of daily life, which can be seen in the large shifts in the way people search. Our final project is to study the effct of Covid-19 lockdown on interests of search terms via looking at Google Search Trends.  
 
-## II. Data Analyses 
+## II. Shiny App
+
+### Components of the App:
+
+  - Google Search Trends Data:
+  
+  - The Lockdown Dates Dataset:
+
+### Finally we create a shiny app where you can look at the search terms you are interested. 
+(please explaining how to use the app and what the y-axis means in two types of query)
+
+
+## III. Data Analyses 
 
 ### search term: gun
 
@@ -17,11 +29,6 @@ output: html_document
 
 ### search term: grocery delivery
 
-
-## III. Shiny App
-
-### Finally we create a shiny app where you can look at the search terms you are interested. 
-(please explaining how to use the app and what the y-axis means in two types of query)
 
 ```{r echo= F}
 #Clear All
