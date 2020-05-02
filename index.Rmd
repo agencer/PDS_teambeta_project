@@ -169,10 +169,14 @@ shinyApp(
 </center>
 
 
-## IV. Data Analyses 
+## IV. Example Search Terms Analyses 
 
-### search term: gun
+### Search Term 1: Nintendo Switch
 
-### search term: Nintendo Switch
+### Search Term 2: Sourdough
 
-### search term: grocery delivery
+### Search Term 3: Fireguns
+
+### Search Term 4: Vote-in-Mail
+
+
