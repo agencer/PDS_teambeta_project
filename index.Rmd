@@ -173,7 +173,10 @@ shinyApp(
 
 #### - **The Website**:
 
-  - We built this website using the principles we learned in Lecture 25. Our process started with developing the data collection and parsing to gather the right visualizations. Then, we transformed it into a Shiny app which collected user input and fed it into our algorithm. Finally, we converted our Shiny app into a R markdown file, which was easily converted into a website. 
+  - We built this website using the principles we learned in Lecture 25. Our process started with developing the data collection (datasets with information on lockdown dates by states) and parsing to gather the right visualizations. 
+  - Then, we transformed it into a *`Shiny App'*, which collected user input and fed it into our algorithm. 
+  - Next, we converted our Shiny app into a R markdown file, which was easily converted into a website. 
+  - Finally, to create a server for our dynamic website, we use the *`shinyapps.io'*, which offers free servers for Shiny-embedded .Rmd file.   
 
 
 ## IV. Example Search Terms Analyses 
