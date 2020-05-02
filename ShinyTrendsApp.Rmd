@@ -13,7 +13,13 @@ output: html_document
 
 ### Components of the App:
 
-  - **Google Search Trends Data**: Google Trends provides access to a largely unfiltered sample of actual anonymized and aggregated search requests made to Google. This allows us to display interest in a particular topic from around the globe or down to city-level geography. 
+  - **Google Search Trends Data**: Google Trends provides access to a largely unfiltered sample of actual anonymized and aggregated search requests made to Google. This allows us to display interest in a particular topic from around the globe or down to city-level geography. The sample that the Google Trends draws on millions of search attempts that are mostly representative for all searches on Google. Note that the Google Trends normalizes search data to make comparisons between terms and geographies easier. Search results are normalized to the time and location of a query by the following process:
+
+Each data point is divided by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest.
+
+The resulting numbers are then scaled on a range of 0 to 100 based on a topic’s proportion to all searches on all topics.
+
+Different regions that show the same search interest for a term don't always have the same total search volumes.
   
   Our App makes use of the 
   
