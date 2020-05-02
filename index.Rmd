@@ -13,7 +13,9 @@ runtime: shiny
 
 #### The Covid-19 outbreak has changed every aspect of daily life, which can be seen in the substantial shifts in the way people search certain terms on internet. Our final project is to create a Shiny App that allows the users to analyze how interest in certain search terms have changed vis-a-vis the Covid-19 lockdown based on Google Search Trends Data.
 
-#### Let's start! Please type <span style="color: red;">**any search term**</span>  you are in interested. And do not forget to specify <span style="color: red;">**state**</span>!
+#### Let's start! 
+
+#### Please type <span style="color: red;">**any search term**</span>  you are in interested. And do not forget to specify the <span style="color: red;">**state**</span>!
 
 ## II. COVID-19 Search Trends 
 
