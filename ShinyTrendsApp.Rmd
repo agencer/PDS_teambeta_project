@@ -1,52 +1,9 @@
 ---
-title: "Team Beta Final Project"
-author: "Alper Sukru Gencer,  Gechun Lin,  William Loh"
 runtime: shiny
 output: html_document
 ---
 
-<center>
-![{***COVID-19: Novel Coronavirus***}](https://www.co.monterey.ca.us/Home/ShowPublishedImage/26051/637174704567470000)
-</center>
-
-## I. Introduction
-
-#### The Covid-19 outbreak has changed every aspect of daily life, which can be seen in the substantial shifts in the way people search certain terms on internet. Our final project is to create a Shiny App that allows the users to analyze how interest in certain search terms have changed vis-a-vis the Covid-19 lockdown based on Google Search Trends Data.
-
-#### In 
-
-## II. Shiny App
-
-### II.I - Components of the App:
-
-  - **Google Search Trends Data**: Google Trends provides access to a largely unfiltered sample of actual anonymized and aggregated search requests made to Google. This allows us to display interest in a particular topic from around the globe or down to city-level geography. The sample that the Google Trends draws on millions of search attempts that are mostly representative for all searches on Google. Note that the Google Trends normalizes search data to make comparisons between terms and geographies easier. Search results are normalized to the time and location of a query by being sorted by the total searches of the geography and time range it represents to compare relative popularity. Otherwise, places with the most search volume would always be ranked highest. The resulting numbers are then scaled on a range of 0 to 100 based on a topic’s proportion to all searches on all topics. Different regions that show the same search interest for a term don't always have the same total search volumes. For further information see the associated, please [documentation](https://support.google.com/trends/answer/4365533?hl=en).
-  
-  - **‘gtrendsR’**: In obtaining the Google Trends Data, our App makes use of an api called *‘gtrendsR’*. The *‘gtrendsR’* allows us to retrive the *Google Trends* data, the normalized trend of terms, by specifying certain 1) search terms, 2) units of geographies, and 3) time ranges. Because we want the users to search for any term that they are interested, we did not specify a certain search term. Instead, the *‘gtrendsR’* retrives whatever the user desires to see. As we are interested with the search trends in the US, we also use the *‘gtrendsR’* to call only the states in the United States. This specification any possible mistakes in the locality searches (e.g. Canada (CA) vs California (US-CA)). Lastly, because we are only interested in the search term trends given the covid-19, we specify the time range between March 01 2020 and April 15 2020. This allows us to see the results that are normalized based on Covid-19 crisis. For further information, please see the related [documentation](https://cran.r-project.org/web/packages/gtrendsR/gtrendsR.pdf).
-  
-  - **The Lockdown Dates Dataset**:
-
-### II.II - The Shiny App:
-  - **What it does**: The app allows the user to input different search terms and outputs different visualizations to show how the popularity of that term has changed during quarantine. 
-  - **Visualizations**
-    - Hits-per-day: Displays a line graph showing the popularity of the term through time. The y-axis is similar to "hits" per day, but in relative terms. In other words, based on how many hits the term generated compared to the rest of the time frame, it will receive a score from 1-100. The x-axis is days in the past 45 day time frame (current frame is set from March 1 to April 15). 
-    - Day-to-day change in hits: Displays a line graph showing the derivative of the hits-per-day graph. In other words, it takes the delta between two consecutive dates and plots it. So, the y-axis is "Change in Hits" and hte x-axis is days again.
-
-(please explaining how to use the app and what the y-axis means in two types of query)
-
-### II.III - The Website:
-
-We built this website using the principles we learned in Lecture 25. Our process started with developing the data collection and parsing to gather the right visualizations. Then, we transformed it into a Shiny app which collected user input and fed it into our algorithm. Finally, we converted our Shiny app into a R markdown file, which was easily converted into a website. 
-
-## III. Data Analyses 
-
-### search term: gun
-
-### search term: Nintendo Switch
-
-### search term: grocery delivery
-
-
-```{r echo= F}
+```{r echo= FALSE}
 #Clear All
 rm(list = ls())
 
