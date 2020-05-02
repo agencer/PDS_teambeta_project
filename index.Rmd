@@ -37,14 +37,6 @@ runtime: shiny
 
 We built this website using the principles we learned in Lecture 25. Our process started with developing the data collection and parsing to gather the right visualizations. Then, we transformed it into a Shiny app which collected user input and fed it into our algorithm. Finally, we converted our Shiny app into a R markdown file, which was easily converted into a website. 
 
-## III. Data Analyses 
-
-### search term: gun
-
-### search term: Nintendo Switch
-
-### search term: grocery delivery
-
 
 ```{r getting ready, echo= F, include=FALSE}
 ####  Clear All
@@ -134,7 +126,7 @@ library(dplyr)
 ```
 
 
-## IV. COVID-19 Search Trends 
+## III. COVID-19 Search Trends 
 
 <center>
 ```{r shiny, echo=FALSE}
@@ -175,3 +167,12 @@ shinyApp(
 )
 ```
 </center>
+
+
+## IV. Data Analyses 
+
+### search term: gun
+
+### search term: Nintendo Switch
+
+### search term: grocery delivery
