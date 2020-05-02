@@ -1,9 +1,26 @@
 ---
+title: "Team Beta Final Project"
+author: "Alper Sukru Gencer,  Gechun Lin,  William Loh"
 runtime: shiny
 output: html_document
 ---
 
-```{r echo= FALSE}
+## I. Introduction
+
+### The Covid-19 outbreak has changed every aspect of daily life, which can be seen in the large shifts in the way people search. Our final project is to study the effct of Covid-19 lockdown on interests of search terms via looking at Google Search Trends.  
+
+## II. Data Analyses 
+
+### search term: gun
+
+### search term: Nintendo Switch
+
+### search term: grocery delivery
+
+
+## III. Shiny App
+
+```{r echo= F}
 #Clear All
 rm(list = ls())
 
