@@ -20,6 +20,9 @@ output: html_document
 
 ## III. Shiny App
 
+### Finally we create a shiny app where you can look at the search terms you are interested. 
+(please explaining how to use the app and what the y-axis means in two types of query)
+
 ```{r echo= F}
 #Clear All
 rm(list = ls())
