@@ -2,6 +2,7 @@
 title: "Team Beta Final Project"
 author: "Alper Sukru Gencer,  Gechun Lin,  William Loh"
 output: html_document
+runtime: shiny
 ---
 
 <center>
@@ -130,6 +131,9 @@ library(dplyr)
 ```
 
 
+## IV. COVID-19 Search Trends 
+
+<center>
 ```{r shiny, echo=FALSE}
 statecodes <- read.csv("https://raw.githubusercontent.com/williamloh1/teambeta/master/Project/datasets/state%20codes.csv")
 shinyApp(
@@ -167,4 +171,4 @@ shinyApp(
   options = list(height = 500)
 )
 ```
-
+</center>
