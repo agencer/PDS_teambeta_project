@@ -169,13 +169,11 @@ shinyApp(
     - Hits-per-day: Displays a line graph showing the popularity of the term through time. The y-axis is similar to "hits" per day, but in relative terms. In other words, based on how many hits the term generated compared to the rest of the time frame, it will receive a score from 1-100. The x-axis is days in the past 45 day time frame (current frame is set from March 1 to April 15). 
     - Day-to-day change in hits: Displays a line graph showing the derivative of the hits-per-day graph. In other words, it takes the delta between two consecutive dates and plots it. So, the y-axis is "Change in Hits" and hte x-axis is days again.
 
-(please explaining how to use the app and what the y-axis means in two types of query)
-
 #### - **The Website**:
 
-  - We built this website using the principles we learned in Lecture 25. Our process started with developing the data collection (datasets with information on lockdown dates by states) and parsing to gather the right visualizations. 
-  - Then, we transformed it into a *`Shiny App'*, which collected user input and fed it into our algorithm. 
-  - Next, we converted our Shiny app into a R markdown file, which was easily converted into a website. 
+  - We built this website using the principles we learned in **Lecture 25**. Our process started with developing the data collection (datasets with information on lockdown dates by states) and parsing to gather the right visualizations. 
+  - Then, we transformed it into a **`Shiny App'**, which collected user input and fed it into our algorithm. 
+  - Next, we converted our Shiny app into a **R markdown file**, which was easily converted into a website. 
   - Finally, to have a server for our dynamic website, we use the *`shinyapps.io'*, which offers free servers for Shiny-embedded .Rmd file. For further information, please see the related [website](https://www.shinyapps.io/).
 
 
