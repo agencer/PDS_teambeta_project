@@ -257,7 +257,7 @@ my.fun2 <- function(vector.keyword = "covid19",  state.abbr = "US", change = FAL
 
 ### Search Cluster 1: Popular Terms After Lockdowns 
 
-```{r Nintendo Switch, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Nintendo Switch Across States"}
+```{r Nintendo Switch, echo= F, warning=F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Nintendo Switch Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "Nintendo Switch", state.abbr = paste0("US-", my.states[i])))
 }
@@ -266,7 +266,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 #### Here
 
-```{r Sourdough, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Sourdough Across States"}
+```{r Sourdough, echo= F, include=T,  warning=F, fig.align = "center", fig.cap = "The Search Trend of Sourdough Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "sourdough", state.abbr = paste0("US-", my.states[i])))
 }
@@ -277,7 +277,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 ### Search Cluster 2: Terms on Wane After Lockdowns 
 
-```{r Cheap Tickets, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Cheap Tickets Across States"}
+```{r Cheap Tickets, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Cheap Tickets Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "cheap tickets", state.abbr = paste0("US-", my.states[i])))
 }
@@ -286,7 +286,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 #### Here
 
-```{r basketball, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Basketball Across States"}
+```{r basketball, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Basketball Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "Basketball", state.abbr = paste0("US-", my.states[i])))
 }
@@ -295,7 +295,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 #### Here
 
-```{r Child Care, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Child Care Across States"}
+```{r Child Care, echo= F, include=T,warning=F,   fig.align = "center", fig.cap = "The Search Trend of Child Care Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "Child Care", state.abbr = paste0("US-", my.states[i])))
 }
@@ -306,7 +306,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 ### Search Cluster 3: Lockdown-Sensitive Terms 
 
-```{r businesses, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Businesses Across States"}
+```{r businesses, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Businesses Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "businesses", state.abbr = paste0("US-", my.states[i])))
 }
@@ -317,7 +317,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 ### Search Cluster 4: Lockdown-Insensitive Terms 
 
-```{r Mask, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Face Mask Across States"}
+```{r Mask, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Face Mask Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "face mask", state.abbr = paste0("US-", my.states[i])))
 }
@@ -328,7 +328,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 ### Search Cluster 5: Partisan Terms
 
-```{r Protests, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Protest Across States"}
+```{r Protests, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Protest Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "Protests", state.abbr = paste0("US-", my.states[i])))
 }
@@ -337,7 +337,7 @@ grid.arrange(NY, CA, FL, MN, TX, GA)
 
 #### Here
 
-```{r Guns, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Guns Across States"}
+```{r Guns, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Guns Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "guns", state.abbr = paste0("US-", my.states[i])))
 }
