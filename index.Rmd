@@ -184,9 +184,8 @@ shinyApp(
 ![{***COVID-19: Novel Coronavirus***}](https://media.canadianunderwriter.ca/uploads/2020/04/COVID-19-economy.jpg)
 </center>
 
-#### Here we analyze the changes in four search terms. In doing so, we show how results vary based on the state of interest. See how patterns differ across <span style="color: blue;">Blue</span> (New York and California),  <span style="color: gray;">Competitive</span> (Florida and Minnesota), and  <span style="color: red;">Red</span> (Texas and Georgia) states! 
+#### Here we analyze the changes in four search terms. In doing so, we show how results vary based on the state of interest. See how patterns differ across <span style="color: blue;">Blue</span> (New York and California),  <span style="color: black;">Competitive</span> (Florida and Minnesota), and  <span style="color: red;">Red</span> (Texas and Georgia) states! 
 
-### Search Term 1: Nintendo Switch
 
 ```{r getting ready 2, echo= F, include=F}
 if(!require(gridExtra)){install.packages("gridExtra"); library(gridExtra)}
@@ -254,45 +253,93 @@ my.fun2 <- function(vector.keyword = "covid19",  state.abbr = "US", change = FAL
 }
 ```
 
-```{r Nintendo Switch, echo= F, include=T}
+<div style="margin-bottom:50px;"></div>
+
+### Search Cluster 1: Popular Terms After Lockdowns 
+
+```{r Nintendo Switch, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Nintendo Switch Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "Nintendo Switch", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-### Search Term 2: Sourdough
+#### Here
 
-```{r Sourdough, echo= F, include=T}
+```{r Sourdough, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Sourdough Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "sourdough", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-### Search Term 3: Protest
+<div style="margin-bottom:50px;"></div>
 
-```{r Protest, echo= F, include=T}
+### Search Cluster 2: Terms on Wane After Lockdowns 
+
+```{r Cheap Tickets, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Cheap Tickets Across States"}
 for(i in 1:6){
-  assign(paste0(my.states[i]), my.fun2(vector.keyword = "Protest", state.abbr = paste0("US-", my.states[i])))
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "cheap tickets", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-### Search Term 4: Face Mask
+#### Here
 
-```{r Stimulus Mask, echo= F, include=T}
+```{r basketball, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Basketball Across States"}
+for(i in 1:6){
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "Basketball", state.abbr = paste0("US-", my.states[i])))
+}
+grid.arrange(NY, CA, FL, MN, TX, GA)
+```
+
+#### Here
+
+```{r Child Care, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Child Care Across States"}
+for(i in 1:6){
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "Child Care", state.abbr = paste0("US-", my.states[i])))
+}
+grid.arrange(NY, CA, FL, MN, TX, GA)
+```
+
+<div style="margin-bottom:50px;"></div>
+
+### Search Cluster 3: Lockdown-Sensitive Terms 
+
+```{r businesses, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Businesses Across States"}
+for(i in 1:6){
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "businesses", state.abbr = paste0("US-", my.states[i])))
+}
+grid.arrange(NY, CA, FL, MN, TX, GA)
+```
+
+<div style="margin-bottom:50px;"></div>
+
+### Search Cluster 4: Lockdown-Insensitive Terms 
+
+```{r Mask, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Face Mask Across States"}
 for(i in 1:6){
   assign(paste0(my.states[i]), my.fun2(vector.keyword = "face mask", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-### Search Term 5: Toilet Paper
+<div style="margin-bottom:50px;"></div>
 
-```{r Toilet Paper, echo= F, include=T}
+### Search Cluster 5: Partisan Terms
+
+```{r Protests, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Protest Across States"}
 for(i in 1:6){
-  assign(paste0(my.states[i]), my.fun2(vector.keyword = "toilet paper", state.abbr = paste0("US-", my.states[i])))
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "Protests", state.abbr = paste0("US-", my.states[i])))
+}
+grid.arrange(NY, CA, FL, MN, TX, GA)
+```
+
+#### Here
+
+```{r Guns, echo= F, include=T,  fig.align = "center", fig.cap = "The Search Trend of Guns Across States"}
+for(i in 1:6){
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "guns", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
