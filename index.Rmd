@@ -158,7 +158,7 @@ shinyApp(
   - **What it does**: The app allows the user to input different search terms and outputs different visualizations to show how the popularity of that term has changed during quarantine. 
   - **Visualizations**
     - Hits-per-day: Displays a line graph showing the popularity of the term through time. The y-axis is similar to "hits" per day, but in relative terms. In other words, based on how many hits the term generated compared to the rest of the time frame, it will receive a score from 1-100. The x-axis is days in the past 45 day time frame (current frame is set from March 1 to April 15). 
-    - Day-to-day change in hits: Displays a line graph showing the derivative of the hits-per-day graph. In other words, it takes the delta between two consecutive dates and plots it. So, the y-axis is "Change in Hits" and hte x-axis is days again.
+    - Day-to-day change in hits: Displays a line graph showing the derivative of the hits-per-day graph. In other words, it takes the delta between two consecutive dates and plots it. So, the y-axis is "Change in Hits" and the x-axis is days again.
 
 
 #### - **Components of the App**:
@@ -167,7 +167,7 @@ shinyApp(
   
   - **‘gtrendsR’**: In obtaining the Google Trends Data, our App makes use of an api called *‘gtrendsR’*. The *‘gtrendsR’* allows us to retrive the *Google Trends* data, the normalized trend of terms, by specifying certain 1) search terms, 2) units of geographies, and 3) time ranges. Because we want the users to search for any term that they are interested, we did not specify a certain search term. Instead, the *‘gtrendsR’* retrives whatever the user desires to see. As we are interested with the search trends in the US, we also use the *‘gtrendsR’* to call only the states in the United States. This specification any possible mistakes in the locality searches (e.g. Canada (CA) vs California (US-CA)). Lastly, because we are only interested in the search term trends given the covid-19, we specify the time range between March 01 2020 and April 15 2020. This allows us to see the results that are normalized based on Covid-19 crisis. For further information, please see the related [documentation](https://cran.r-project.org/web/packages/gtrendsR/gtrendsR.pdf).
   
-  - **The Lockdown Dates Dataset**: [documentation](https://auravision.ai/covid19-lockdown-tracker/)
+  - **The Lockdown Dataset**: [Aura Vision](https://auravision.ai/covid19-lockdown-tracker/) provides a Global Covid-19 Lockdown Tracker which source data is downloadable. The [dataset](https://raw.githubusercontent.com/williamloh1/teambeta/master/Project/datasets/lockdown_dates.csv) includes the start date and end date of lockdowns at different places as well as their information source. Based on the lockdown dataset, we draw a vertical line at x=Start Date of Lockdown in the plot if that state has started lockdown during March 01 2020 and April 15 2020. We believe that no US state ends lockdown before April 15 2020.   
  
 
 #### - **The Website**:
