@@ -264,7 +264,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here
+#### Here Discussion
 
 ```{r Sourdough, echo= F, include=T,  warning=F, fig.align = "center", fig.cap = "The Search Trend of Sourdough Across States"}
 for(i in 1:6){
@@ -284,7 +284,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here
+#### Here Discussion
 
 ```{r basketball, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Basketball Across States"}
 for(i in 1:6){
@@ -293,16 +293,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here
-
-```{r Child Care, echo= F, include=T,warning=F,   fig.align = "center", fig.cap = "The Search Trend of Child Care Across States"}
-for(i in 1:6){
-  assign(paste0(my.states[i]), my.fun2(vector.keyword = "Child Care", state.abbr = paste0("US-", my.states[i])))
-}
-grid.arrange(NY, CA, FL, MN, TX, GA)
-```
-
-<div style="margin-bottom:50px;"></div>
+<div style="margin-bottom:70px;"></div>
 
 ### Search Cluster 3: Lockdown-Sensitive Terms 
 
@@ -335,11 +326,11 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here
+#### Here Discussion
 
 ```{r Guns, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Guns Across States"}
 for(i in 1:6){
-  assign(paste0(my.states[i]), my.fun2(vector.keyword = "guns", state.abbr = paste0("US-", my.states[i])))
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "firearms", state.abbr = paste0("US-", my.states[i])))
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
