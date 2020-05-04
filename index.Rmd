@@ -188,7 +188,7 @@ shinyApp(
 
 
 ```{r getting ready 2, echo= F, include=F}
-if(!require(gridExtra)){install.packages("gridExtra"); library(gridExtra)}
+library(gridExtra)
 my.list <- as.list(NULL)
 my.states <- c("NY", "CA", "TX", "GA", "FL", "MN")
 my.fun2 <- function(vector.keyword = "covid19",  state.abbr = "US", change = FALSE){
