@@ -184,7 +184,7 @@ shinyApp(
 ![{***COVID-19: Novel Coronavirus***}](https://media.canadianunderwriter.ca/uploads/2020/04/COVID-19-economy.jpg)
 </center>
 
-#### Here we analyze the changes in four search terms. In doing so, we show how results vary based on the state of interest. See how patterns differ across <span style="color: blue;">Blue</span> (New York and California),  <span style="color: black;">Competitive</span> (Florida and Minnesota), and  <span style="color: red;">Red</span> (Texas and Georgia) states! 
+#### Here we analyze the changes in five search clusters, which contain popular terms, waning terms, lockdown-sensitive terms, lockdown-insensitive terms, and partisan terms. In doing so, we show how results vary based on the state of interest. We pick six states with different partisan support, which are <span style="color: blue;">Blue</span> (New York and California),  <span style="color: grey;">Competitive</span> (Florida and Minnesota), and  <span style="color: red;">Red</span> (Texas and Georgia), to see if the search trend patterns of some terms differ across states! 
 
 
 ```{r getting ready 2, echo= F, include=F}
@@ -218,8 +218,8 @@ my.fun2 <- function(vector.keyword = "covid19",  state.abbr = "US", change = FAL
         theme_light() +
         theme(axis.text.x=element_text(angle=60, hjust=1))+
         geom_vline(xintercept = as.Date(statelock$Start.date))+
-        geom_text(aes(x=as.Date(statelock$Start.date), label="\nafter lockdown", y=mean(range(interest_over_time.hits))), size=4, colour="grey", angle=90) +
-        geom_text(aes(x=as.Date(statelock$Start.date), label="before lockdown\n", y=mean(range(interest_over_time.hits))), size=4, colour="grey", angle=90)
+        geom_text(aes(x=as.Date(statelock$Start.date), label="\nafter lockdown", y=mean(range(interest_over_time.hits))), size=2, colour="grey", angle=90) +
+        geom_text(aes(x=as.Date(statelock$Start.date), label="before lockdown\n", y=mean(range(interest_over_time.hits))), size=2, colour="grey", angle=90)
     } else{ggplot(result, aes(x=as.Date(interest_over_time.date), y=interest_over_time.hits)) +
         geom_line( color="#69b3a2") + 
         ylab("Hits") +
@@ -238,8 +238,8 @@ my.fun2 <- function(vector.keyword = "covid19",  state.abbr = "US", change = FAL
         theme_light() +
         theme(axis.text.x=element_text(angle=60, hjust=1))+
         geom_vline(xintercept = as.Date(statelock$Start.date))+
-        geom_text(aes(x=as.Date(statelock$Start.date), label="\nafter lockdown", y=mean(range(interest_over_time.hits.change[-1]))), size=4, colour="grey", angle=90) +
-        geom_text(aes(x=as.Date(statelock$Start.date), label="before lockdown\n", y=mean(range(interest_over_time.hits.change[-1]))), size=4, colour="grey", angle=90)
+        geom_text(aes(x=as.Date(statelock$Start.date), label="\nafter lockdown", y=mean(range(interest_over_time.hits.change[-1]))), size=2, colour="grey", angle=90) +
+        geom_text(aes(x=as.Date(statelock$Start.date), label="before lockdown\n", y=mean(range(interest_over_time.hits.change[-1]))), size=2, colour="grey", angle=90)
     } else{
       ggplot(result, aes(x=as.Date(interest_over_time.date), y=interest_over_time.hits.change)) +
         geom_line( color="#69b3a2") + 
@@ -264,7 +264,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here Discussion
+
 
 ```{r Sourdough, echo= F, include=T,  warning=F, fig.align = "center", fig.cap = "The Search Trend of Sourdough Across States"}
 for(i in 1:6){
@@ -273,7 +273,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here Discussion
+
 
 ```{r Guns, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Guns Across States"}
 for(i in 1:6){
@@ -282,10 +282,14 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
+#### Discussion: as the plots show, the search terms, Nintendo Switch, Sourdough, and Gun, become increasing popular since March 20, which is the period that first wave of states started lockdowned. These search trends reflect that after lockdown, people have to stay at home. Their attention shifts to home entertainment and safety. And partisanship does not affect how people live their life.  
+
 <div style="margin-bottom:50px;">
 </div>
 
-### Search Cluster 2: Terms on Wane After Lockdowns 
+
+
+### Search Cluster 2: Waning Terms After Lockdowns 
 
 ```{r Cheap Tickets, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Cheap Tickets Across States"}
 for(i in 1:6){
@@ -294,7 +298,7 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
-#### Here Discussion
+
 
 ```{r basketball, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of Basketball Across States"}
 for(i in 1:6){
@@ -302,6 +306,8 @@ for(i in 1:6){
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
+
+#### Discussion: in contrast, some search terms, such as Cheap Tickets, Basketball, are on the wane. After lockdown, international or domestic travel is banned or restricted, which maybe the reason why people search cheap tickets less than before. NBA announced the decision to suspend season on March 12. Therefore, the search trend of basketball is down since then. Again, we do not observe any different search trend patterns across states. 
 
 <div style="margin-bottom:70px;">
 </div>
@@ -315,6 +321,8 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
+#### Discussion: we also found that, some terms are very sensitive to lockdown. For example, Business search spiked around the start date of lockdown in each state (except Texas). 
+
 <div style="margin-bottom:50px;">
 </div>
 
@@ -327,6 +335,8 @@ for(i in 1:6){
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
 
+#### Discussion: in contrast, some terms, their search trends are not affected by lockdown. For instance, Face Mask search did not increase until CDC suggest people to wear for protection at the begining of April. 
+
 <div style="margin-bottom:50px;">
 </div>
 
@@ -338,4 +348,16 @@ for(i in 1:6){
 }
 grid.arrange(NY, CA, FL, MN, TX, GA)
 ```
+
+
+```{r First, echo= F, include=T, warning=F,  fig.align = "center", fig.cap = "The Search Trend of First Amendment Across States"}
+for(i in 1:6){
+  assign(paste0(my.states[i]), my.fun2(vector.keyword = "First Amendment", state.abbr = paste0("US-", my.states[i])))
+}
+grid.arrange(NY, CA, FL, MN, TX, GA)
+```
+
+#### Discussion: none of the above terms show different patterns of search trend across states. So we tried some partisan terms, like Protest and First Amendment, but it is still hard to find the association between partsianship and search trend. Although there maybe individual level partisan differences, it is really hard to detect any particular search trend pattern at state level based on partisan support.
+
+
 
