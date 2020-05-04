@@ -5,8 +5,8 @@ account: alper-gencer
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2230326
-bundleId: 3101564
+bundleId: 3102397
 url: https://alper-gencer.shinyapps.io/PDS_teambeta_project/
-when: 1588604032.5261
+when: 1588614952.50495
 asMultiple: FALSE
 asStatic: FALSE
